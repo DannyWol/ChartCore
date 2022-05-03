@@ -4,6 +4,8 @@
 
 <script>
 import {Chart, registerables} from 'chart.js';
+import {getRelativePosition} from 'chart.js/helpers';
+
 Chart.register(...registerables);
 
 export default {
@@ -23,7 +25,11 @@ export default {
 				        data: []
 			        }]
 		        },
-		        options: {}
+		        options: {
+			        onClick: (e) => {
+				        console.log(e);
+			        }
+		        }
 	        },
 	        style: {
 
